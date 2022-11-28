@@ -2,10 +2,10 @@ export type pokemon = {
   count: number;
   next: string;
   previous?: number;
-  result: Array<pokeResult>;
+  results: Array<pokeResult>;
 };
 
-type pokeResult = {
+export type pokeResult = {
   name: string;
   url: string;
 };
