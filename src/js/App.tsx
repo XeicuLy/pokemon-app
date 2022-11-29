@@ -55,7 +55,6 @@ const App = () => {
     setPrevURL(data.previous);
     setLoading(false);
   };
-
   return (
     <>
       <Navbar />
