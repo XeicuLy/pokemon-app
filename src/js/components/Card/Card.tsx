@@ -1,3 +1,5 @@
+import './Card.css';
+
 export const Card = ({ pokemon }: any) => {
   return (
     <div className='card'>

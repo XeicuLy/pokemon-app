@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
-import { Card } from './components/Card';
+import { Card } from './components/Card/Card';
 import { pokeResult } from './types/pokemon';
 import { getAllPokemon, getPokemon } from './utils/pokemon';
+
+import '../css/App.css';
 
 const App = () => {
   const initialURL = 'https://pokeapi.co/api/v2/pokemon';
@@ -29,16 +31,15 @@ const App = () => {
     );
     setPokemonData(_pokemonData);
   };
-  console.log(pokemonData);
 
   return (
-    <div>
+    <div className='App'>
       {loading ? (
         <h1>ロード中...</h1>
       ) : (
         <div className='pokemonCardContainer'>
           {pokemonData.map((pokemon, i) => {
-            return <Card key={i} pokemon={pokemon}/>
+            return <Card key={i} pokemon={pokemon} />;
           })}
         </div>
       )}
