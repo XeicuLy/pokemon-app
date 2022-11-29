@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Card } from './components/Card';
 import { pokeResult } from './types/pokemon';
 import { getAllPokemon, getPokemon } from './utils/pokemon';
 
@@ -30,7 +31,19 @@ const App = () => {
   };
   console.log(pokemonData);
 
-  return <div>{loading ? <h1>ロード中...</h1> : <h1>ポケモンデータを取得しました</h1>}</div>;
+  return (
+    <div>
+      {loading ? (
+        <h1>ロード中...</h1>
+      ) : (
+        <div className='pokemonCardContainer'>
+          {pokemonData.map((pokemon, i) => {
+            return <Card key={i} pokemon={pokemon}/>
+          })}
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default App;
