@@ -1,5 +1,5 @@
 .card {
-  width: 290px;
+  width: 90%;
   box-shadow: 2px 8px 21px -2px #777777;
   border-radius: 10px;
   background-color: #fff;
@@ -7,11 +7,18 @@
 
 .cardName {
   padding: 0;
-  font-size: 24px;
+  font-size: 1.2em;
   margin-top: 0;
   margin-bottom: 10px;
 }
 
 .cardInfo {
   text-align: center;
+}
+
+.cardText {
+  font-weight: 600;
+}
+.cardText span {
+  font-weight: 100;
 }
